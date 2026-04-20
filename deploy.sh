@@ -1,15 +1,15 @@
-flux create source git k-helm-charts \
-  --url=https://github.com/namhh5820/k-helm-charts.git \
+flux create source git helm-github-io \
+  --url=https://github.com/helm/examples.git \
   --branch=main \
   --interval=1m \
-  --export > ./clusters/k8s-cluster-qa/k-helm-charts-source.yaml
+  --export > ./clusters/k8s-cluster-qa/helm-github-io-source.yaml
 
 
 
-flux create hr python-app \
-  --source=GitRepository/k-helm-charts.flux-system \
-  --chart="./python-app-chart" \
+flux create hr hello-world \
+  --source=GitRepository/helm-github-io.flux-system \
+  --chart="./charts/hello-world" \
   --interval=5m \
-  --export > ./clusters/k8s-cluster-qa/python-app-hr.yaml
+  --export > ./clusters/k8s-cluster-qa/hello-world-hr.yaml
 
 

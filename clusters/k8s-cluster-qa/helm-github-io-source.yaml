@@ -2,10 +2,10 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
-  name: k-helm-charts
+  name: helm-github-io
   namespace: flux-system
 spec:
-  interval: 30s
+  interval: 1m0s
   ref:
     branch: main
-  url: https://github.com/namhh5820/k-helm-charts.git
+  url: https://github.com/helm/examples.git
