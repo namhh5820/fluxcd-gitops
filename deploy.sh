@@ -5,3 +5,11 @@ flux create source git k-helm-charts \
   --export > ./clusters/k8s-cluster-qa/k-helm-charts-source.yaml
 
 
+
+flux create hr python-app \
+  --source=GitRepository/k-helm-charts.flux-system \
+  --chart="./python-app-chart" \
+  --interval=5m \
+  --export > ./clusters/k8s-cluster-qa/python-app-hr.yaml
+
+
