@@ -13,7 +13,7 @@ spec:
         kind: GitRepository
         name: k-helm-charts
         namespace: flux-system
-  interval: 5m0s
+  interval: 30s
   values:
     image:
       repository: nginx
