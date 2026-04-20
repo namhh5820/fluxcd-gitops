@@ -9,7 +9,7 @@ spec:
     createNamespace: true
   chart:
     spec:
-      chart: k-helm-charts/python-app-chart
+      chart: python-app-chart
       sourceRef:
         kind: GitRepository
         name: main-repo
