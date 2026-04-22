@@ -15,7 +15,7 @@ spec:
         namespace: flux-system
   interval: 30s
   values:
-    replicaCount: 1
+    replicaCount: 2
     image:
       repository: "ghcr.io/stefanprodan/podinfo"
       tag: "6.0.0"
