@@ -37,3 +37,9 @@ flux create source git helm-podinfo \
 --branch=master \
 --interval=1m \
 --export > ./clusters/k8s-cluster-qa/podinfo-source.yaml
+
+flux create hr podinfo \
+  --source=GitRepository/helm-podinfo.flux-system \
+  --chart="./charts/podinfo" \
+  --interval=5m \
+  --export > ./clusters/k8s-cluster-qa/podinfo-hr.yaml
