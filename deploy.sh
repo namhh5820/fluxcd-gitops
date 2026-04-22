@@ -29,3 +29,11 @@ flux reconcile source git flux-system
 flux reconcile helmrelease hello-world --namespace default
 
 
+
+
+### PODINFO
+flux create source git helm-podinfo \
+--url=https://stefanprodan.github.io/podinfo \
+--branch=master \
+--interval=1m \
+--export > ./clusters/k8s-cluster-qa/podinfo-source.yaml
