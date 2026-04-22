@@ -16,14 +16,13 @@ flux create hr hello-world \
 flux get hr -A
 
 # Get details of a specific release
-flux get hr podinfo --namespace default
+flux get hr hello-world --namespace default
 
 # Stream logs for a specific HelmRelease
-flux logs --kind=HelmRelease --name=podinfo --namespace=default
+flux logs --kind=HelmRelease --name=hello-world --namespace=default
 
 # View all logs from the helm-controller
 flux logs --level=error --all-namespaces
-
 
 #If you don't want to wait for the interval
 flux reconcile source git flux-system

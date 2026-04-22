@@ -13,9 +13,9 @@ spec:
         kind: GitRepository
         name: helm-github-io
         namespace: flux-system
-  interval: 5m0s
+  interval: 15s
   values:
-    replicaCount: 2
+    replicaCount: 3
     image:
       repository: "nginx"
       tag: "1.30"
