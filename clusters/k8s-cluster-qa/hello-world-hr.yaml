@@ -18,4 +18,4 @@ spec:
     replicaCount: 2
     image:
       repository: "nginx"
-      tag: "1.30"
+      tag: "1.30.100"

@@ -27,6 +27,6 @@ flux logs --level=error --all-namespaces
 
 #If you don't want to wait for the interval
 flux reconcile source git flux-system
-flux reconcile helmrelease python-web-app
+flux reconcile helmrelease hello-world --namespace default
 
 
