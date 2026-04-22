@@ -18,4 +18,11 @@ spec:
     replicaCount: 2
     image:
       repository: "nginx"
-      tag: "1.30.100"
+      tag: "1.30"
+    resoureces:
+      limits:
+        cpu: 100m
+        memory: 128Mi
+      requests:
+        cpu: 100m
+        memory: 128Mi
