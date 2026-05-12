@@ -1,3 +1,24 @@
+# To install the CLI with Homebrew run:
+brew install fluxcd/tap/flux
+
+
+# Export your GitHub personal access token and username:
+export GITHUB_TOKEN=<your-token>
+export GITHUB_USER=<your-username>
+
+# Check you have everything needed to run Flux by running the following command:
+flux check --pre
+
+# Install Flux onto your cluster
+flux bootstrap github \
+  --owner=$GITHUB_USER \
+  --repository=fluxcd-gitops \
+  --branch=main \
+  --path=./clusters/k8s-cluster-qa \
+  --personal
+
+
+
 flux create source git helm-github-io \
   --url=https://github.com/helm/examples.git \
   --branch=main \
